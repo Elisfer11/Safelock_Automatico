@@ -6,7 +6,7 @@ xdotool key Return
 sleep 1 
 xdotool type "odroid"
 xdotool key Return
-sleep 600
+sleep 240
 xdotool key Return
 sleep 1
 xdotool key Return
@@ -26,7 +26,7 @@ sleep 1
 xdotool key Return
 sleep 1
 xdotool key Return
-sleep 300
+sleep 420
 xdotool key Return
 sleep 5
 xdotool type "exit"

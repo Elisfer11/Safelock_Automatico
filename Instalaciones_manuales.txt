@@ -1,0 +1,69 @@
+Instalar Pi-Hole
+sudo curl -sSL https://raw.githubusercontent.com/pi-hole/pi-hole/master/automated%20install/basic-install.sh | bash
+
+#clonar repositorio
+
+cd /var/www/html
+sudo rm -r admin/
+sudo git clone --depth 1 https://github.com/Elisfer11/prueba_interfaz.git admin
+
+#DHCP Starvation
+cd ~
+sudo apt-get install yersinia
+
+ir a pi-hole y activar dhcp
+
+crontab -e
+#baje hasta abajo 
+* * * * * python3 /var/www/html/admin/automatizacion.py
+0 3 * * * /var/www/html/admin ; git pull
+
+
+#Ahora se espera a que pase un minuto y desactiva y activa el wifi del celular y comprueba en pi-hole si aparece en el dhcp
+
+#instalacion de teamviewer
+wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
+
+#Buscar teamviewer en la interfaz e instalarlo
+
+Una vez instalado TeamViewer se puede configurar de manera manual o con el script Configuracion_TeamViewer.sh
+
+sudo apt-get install -y xdotool
+./Configuracion_TeamViewer.sh
+
+Si Desea configurar TeamViewer de manera manual debera seguir los siguientes pasos
+1-Ingresar a TeamViewer
+2-Ir a Extras en el menu de arriba
+3-Options
+4-Ir a Security en el panel izquierdo
+5-Password Strength
+6-Disabled(no random password)
+#Lo anterior deshabilitara la password aleatoria
+7-Ir a Advanced en el panel izquierdo
+8-Ir a Personal Password y colocar la contrase;a "SafeLock1."
+
+Para la apertura de TeamViewer al encender el SafeLock se deberan seguir los siguientes pasos: (Se intetara automatizar esta parte luego de ser probada en los nuevos equipos)
+
+
+1-Presionar la tecla "windows"
+2-Escribir en el buscador Startup Applications
+3-Ingresar a Startup Applications
+4-Darle en +Add
+5-Colocar TeamViewer como nombre
+6-Colocar "teamviewer" como comando, sin incluir comillas
+7-Darle nuevamente en +Add
+
+8-Salir de la configuracion
+
+9-Volver al buscador
+10-Dar clic en Administration
+11-Abrir Login Window
+12-Colocar Odroid como contrase;a
+13-Entrar a Users en las opciones de arriba
+14-Colocar en Automatic Login odroid como Username
+15-Cerrar
+16-reiniciar el SafeLock
+
+
+
+

@@ -7,7 +7,11 @@ if os.geteuid() != 0:
     exit(1)
 else:
     # Actualiza el sistema
-    os.system("sudo apt update")
+    os.system("sudo apt update") 
+
+    #Libreria que interactua con el sistema
+    os.system("sudo apt-get install -y xdotool")
+
 
     # Descarga e instala Pi-hole
     os.system("curl -sSL https://install.pi-hole.net | bash")
