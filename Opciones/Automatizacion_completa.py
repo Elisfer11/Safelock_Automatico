@@ -2,30 +2,28 @@ import os
 import subprocess
 
 # Verifica si el usuario tiene permisos de superusuario
-if os.geteuid() != 0:
-    print("Este script debe ejecutarse como superusuario (root).")
-    exit(1)
-else:
-    # Actualiza el sistema
-    os.system("sudo apt update")
+# Actualiza el sistema
+os.system("sudo apt update")
     
-    #Libreria que interactua con el sistema
-    os.system("sudo apt-get install -y xdotool")
+#Libreria que interactua con el sistema
+os.system("sudo apt-get install -y xdotool")
 
-    # Descarga e instala Pi-hole
-    os.system("./Automatizacion_pi-hole.sh")
-    #cambiar contra
-    new_password = "safelock"
-    os.system(f'echo "{new_password}\n{new_password}" | sudo pihole -a -p')
+# Descarga e instala Pi-hole
+os.system("cd /home/odroidSafeLock_Automatico/Opciones/")
 
-    # Cambiar al directorio /var/www/html y realizar operaciones
-    os.system("sudo rm -r /var/www/html/admin/")
-    os.system("sudo git clone --depth 1 https://github.com/Elisfer11/prueba_interfaz.git /var/www/html/admin")
+os.system("./Automatizacion_pi-hole.sh")
+#cambiar contra
+new_password = "safelock"
+os.system(f'echo "{new_password}\n{new_password}" | sudo pihole -a -p')
 
-    # Instala Yersinia
-    os.system("sudo apt install -y yersinia")
+# Cambiar al directorio /var/www/html y realizar operaciones
+os.system("sudo rm -r /var/www/html/admin/")
+os.system("sudo git clone --depth 1 https://github.com/Elisfer11/prueba_interfaz.git /var/www/html/admin")
 
-    print("Pi-hole y Yersinia se han instalado correctamente.")
+# Instala Yersinia
+os.system("sudo apt install -y yersinia")
+
+print("Pi-hole y Yersinia se han instalado correctamente.")
 
 
 
