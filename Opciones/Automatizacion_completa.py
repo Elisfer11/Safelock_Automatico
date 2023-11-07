@@ -1,5 +1,6 @@
 import os
 import subprocess
+user = os.getlogin()
 
 # Verifica si el usuario tiene permisos de superusuario
 # Actualiza el sistema
@@ -9,7 +10,6 @@ os.system("sudo apt update")
 os.system("sudo apt-get install -y xdotool")
 
 # Descarga e instala Pi-hole
-os.system("cd /home/odroidSafeLock_Automatico/Opciones/")
 
 os.system("./Automatizacion_pi-hole.sh")
 #cambiar contra

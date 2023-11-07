@@ -1,5 +1,5 @@
 #!/bin/bash
-xdotool key Super_L+t
+xdotool key Control+Alt+t
 sleep 4
 xdotool type "teamviewer"
 xdotool key Return
