@@ -23,9 +23,6 @@ os.system("sudo git clone --depth 1 https://github.com/Elisfer11/prueba_interfaz
 # Instala Yersinia
 os.system("sudo apt install -y yersinia")
 
-print("Pi-hole y Yersinia se han instalado correctamente.")
-
-
 
 print("Configuración de Pi-hole y safelock completada, y el repositorio git ha sido clonado.")
 
@@ -35,3 +32,7 @@ with open('/tmp/cronjob', 'w') as cronfile:
     cronfile.write(cronjob)
 subprocess.call(['sudo', 'crontab', '/tmp/cronjob'])
 print("Tareas configuradas.")
+
+
+#Instalacion TeamViewer
+os.system("sudo apt install ./teamviewer-host_15.47.3_arm64.deb")
