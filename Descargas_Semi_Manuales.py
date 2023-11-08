@@ -14,7 +14,7 @@ else:
 
 
     # Descarga e instala Pi-hole
-    os.system("curl -sSL https://install.pi-hole.net | bash")
+    os.system("sudo curl -sSL https://raw.githubusercontent.com/pi-hole/pi-hole/master/automated%20install/basic-install.sh | bash")
     #cambiar contra
     new_password = "safelock"
     os.system(f'echo "{new_password}\n{new_password}" | sudo pihole -a -p')
@@ -38,3 +38,13 @@ with open('/tmp/cronjob', 'w') as cronfile:
     cronfile.write(cronjob)
 subprocess.call(['sudo', 'crontab', '/tmp/cronjob'])
 print("Tareas configuradas.")
+
+
+#Instalacion TeamViewer
+user = os.getlogin()
+
+os.system(f"sudo cp /home/{user}/SafeLock_Automatico/Opciones/teamviewer-host_15.47.3_arm64.deb /home/{user}/")
+
+os.system("sudo apt-get install ./teamviewer-host_15.47.3_arm64.deb")
+
+os.system (f"sudo rm /home/{user}/teamviewer-host_15.47.3_arm64.deb")

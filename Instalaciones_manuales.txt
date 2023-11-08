@@ -22,29 +22,19 @@ crontab -e
 #Ahora se espera a que pase un minuto y desactiva y activa el wifi del celular y comprueba en pi-hole si aparece en el dhcp
 
 #instalacion de teamviewer
-wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
+sudo apt-get install ./SafeLock_Automatico/Opciones/teamviewer-host_15.47.3_arm64.deb
 
-#Buscar teamviewer en la interfaz e instalarlo
+Una vez instalado TeamViewer se debe configurar de manera manual
 
-Una vez instalado TeamViewer se puede configurar de manera manual o con el script Configuracion_TeamViewer.sh
-
-sudo apt-get install -y xdotool
-./Configuracion_TeamViewer.sh
-
-Si Desea configurar TeamViewer de manera manual debera seguir los siguientes pasos
 1-Ingresar a TeamViewer
-2-Ir a Extras en el menu de arriba
-3-Options
-4-Ir a Security en el panel izquierdo
-5-Password Strength
-6-Disabled(no random password)
+2-Ir a configuracion
 #Lo anterior deshabilitara la password aleatoria
 7-Ir a Advanced en el panel izquierdo
 8-Ir a Personal Password y colocar la contrase;a "SafeLock1."
 
 Para la apertura de TeamViewer al encender el SafeLock se deberan seguir los siguientes pasos: (Se intetara automatizar esta parte luego de ser probada en los nuevos equipos)
 
-
+#Esta parte solo es valida para los Odroids
 1-Presionar la tecla "windows"
 2-Escribir en el buscador Startup Applications
 3-Ingresar a Startup Applications

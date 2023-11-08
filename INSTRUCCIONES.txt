@@ -2,15 +2,12 @@
 OPCION AUTOMATICA:
 Si desea hacer una instalacion completamente automatica, ejecute el archivo Automatizacion_completa.py. 
 Todo el proceso durara al rededor de unos 15 minutos
-Cabe resaltar que la instalacion de TeamViewer se debe hacer manual por el momento al igual que la iniciacion automatica de TeamViewer. Al final del archivo Instalaciones_manuales.txt viene todo lo necesario para los pasos anteriores
-Una vez instalado TeamViewer corra el archivo Configuracion_TeamViewer.sh y dejelo actuar unos minutos sin tocar ni mover el raton ni el teclado.
 
 
 OPCION SEMIAUTOMATICA:
 Corra el archivo Descargas_Semi_Manuales.py. Debera estar atento para seleccionar las opciones que saltan en cuadros de dialogo.
-Para TeamViewer seguir los mismos pasos que en la opcion automatica
 
-s
+
 OPCION MANUAL:
 Abra el archivo Instalaciones_manuales.txt y siga todas las instrucciones
 
