@@ -43,7 +43,7 @@ print("Tareas configuradas.")
 #Instalacion TeamViewer
 user = os.getlogin()
 
-os.system(f"sudo cp /home/{user}/SafeLock_Automatico/Opciones/teamviewer-host_15.47.3_arm64.deb /home/{user}/")
+os.system(f"sudo cp /home/safelock/Safelock_Automatico/Opciones/teamviewer-host_15.47.3_arm64.deb /home/{user}")
 
 os.system("sudo apt-get install ./teamviewer-host_15.47.3_arm64.deb")
 

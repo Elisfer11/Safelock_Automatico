@@ -4,4 +4,4 @@ os.system(f"sudo cp /home/{user}/SafeLock_Automatico/Opciones/Automatizacion_com
 
 os.system(f"sudo python3 /home/{user}/Automatizacion_completa.py")
 
-os.system(f"sudo rm /home/{user}/Automatizacion_completa.py /home/{user}/Automatizacion_pi-hole.sh /home/{user}/teamviewer-host_15.47.3_arm64.deb")
+os.system(f"sudo rm /home/{user}/Automatizacion_completa.py /home/{user}/Automatizacion_pi-hole.sh")
