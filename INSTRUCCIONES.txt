@@ -5,6 +5,7 @@ Todo el proceso durara al rededor de unos 15 minutos
 
 
 OPCION SEMIAUTOMATICA:
+Esta opcion es obligatoria si desea realiza el proceso desde una caja "Safelock"
 Corra el archivo Descargas_Semi_Manuales.py. Debera estar atento para seleccionar las opciones que saltan en cuadros de dialogo.
 
 
