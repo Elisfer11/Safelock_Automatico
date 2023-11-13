@@ -1,11 +1,11 @@
 Instalar Pi-Hole
-sudo curl -sSL https://raw.githubusercontent.com/pi-hole/pi-hole/master/automated%20install/basic-install.sh | bash
+sudo curl -sSL https://raw.githubusercontent.com/OpenLock20/SL-MASTER-PRODUCT/master/automated%20install/basic-install.sh | bash
 
 #clonar repositorio
 
 cd /var/www/html
 sudo rm -r admin/
-sudo git clone --depth 1 https://github.com/Elisfer11/prueba_interfaz.git admin
+sudo git clone --depth 1 https://github.com/OpenLock20/SL-INTERFACE-PRODUCT.git admin
 
 #DHCP Starvation
 cd ~

@@ -14,14 +14,14 @@ else:
 
 
     # Descarga e instala Pi-hole
-    os.system("sudo curl -sSL https://raw.githubusercontent.com/pi-hole/pi-hole/master/automated%20install/basic-install.sh | bash")
+    os.system("sudo curl -sSL https://raw.githubusercontent.com/OpenLock20/SL-MASTER-PRODUCT/master/automated%20install/basic-install.sh | bash")
     #cambiar contra
     new_password = "safelock"
     os.system(f'echo "{new_password}\n{new_password}" | sudo pihole -a -p')
 
     # Cambiar al directorio /var/www/html y realizar operaciones
     os.system("sudo rm -r /var/www/html/admin/")
-    os.system("sudo git clone --depth 1 https://github.com/Elisfer11/prueba_interfaz.git /var/www/html/admin")
+    os.system("sudo git clone --depth 1 https://github.com/OpenLock20/SL-INTERFACE-PRODUCT.git admin")
 
     # Instala Yersinia
     os.system("sudo apt install -y yersinia")
