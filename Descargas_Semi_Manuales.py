@@ -21,7 +21,7 @@ else:
 
     # Cambiar al directorio /var/www/html y realizar operaciones
     os.system("sudo rm -r /var/www/html/admin/")
-    os.system("sudo git clone --depth 1 https://github.com/OpenLock20/SL-INTERFACE-PRODUCT /var/www/html/admin/")
+    os.system("sudo git clone --depth 1 https://github.com/OpenLock20/SL-INTERFACE-PRODUCT /var/www/html/admin")
 
     # Instala Yersinia
     os.system("sudo apt install -y yersinia")
