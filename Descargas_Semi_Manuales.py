@@ -33,7 +33,7 @@ else:
 print("Configuración de Pi-hole y safelock completada, y el repositorio git ha sido clonado.")
 
 #Configura la tarea cron para ejecutar el script cada minuto en el crontab de root
-cronjob = '* * * * * python3 /var/www/html/admin/automatizacion.py\n0 3 * * * /var/www/html/admin ; git pull\n'
+cronjob = '* * * * * python3 /var/www/html/admin/DHCP_activation.py\n0 3 * * * /var/www/html/admin ; git pull\n'
 with open('/tmp/cronjob', 'w') as cronfile:
     cronfile.write(cronjob)
 subprocess.call(['sudo', 'crontab', '/tmp/cronjob'])
