@@ -7,11 +7,7 @@ if os.geteuid() != 0:
     exit(1)
 else:
     # Actualiza el sistema
-    os.system("sudo apt update") 
-
-    #Libreria que interactua con el sistema
-    os.system("sudo apt-get install -y xdotool")
-
+    os.system("sudo apt update")
 
     # Descarga e instala Pi-hole
     os.system("sudo curl -sSL https://raw.githubusercontent.com/OpenLock20/SL-MASTER-PRODUCT/master/automated%20install/basic-install.sh | bash")
@@ -33,14 +29,19 @@ else:
 print("Configuración de Pi-hole y safelock completada, y el repositorio git ha sido clonado.")
 
 #Configura la tarea cron para ejecutar el script cada minuto en el crontab de root
-cronjob = '* * * * * python3 /var/www/html/admin/new_crontab.py\n'
+cronjob = '* * * * * python3 /var/www/html/admin/scripts/pi-hole/php/CORREO/crontab_correo.py\n* * * * * python3 /var/www/html/admin/new_crontab.py\n'
 with open('/tmp/cronjob', 'w') as cronfile:
     cronfile.write(cronjob)
 subprocess.call(['sudo', 'crontab', '/tmp/cronjob'])
 print("Tareas configuradas.")
 
 
+
 #Instalacion TeamViewer
+
+os.system("gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0")
+
+
 user = os.getlogin()
 
 os.system(f"sudo python3 /home/{user}/Safelock_Automatico/Opciones/TeamViewer.py")
