@@ -18,7 +18,17 @@ os.system("sudo apt install -y yersinia")
 #Instala dependencias para el envio de correos
 os.system("sudo apt-get install python3-pip")
 
-os.system("pip3 install requests")
+os.system("pip3 install -y requests")
+
+#Permisos para los archivos
+archivos = [
+    "/var/www/html/admin/scripts/pi-hole/php/CORREO/configuracion_correo.txt",
+    "/var/www/html/admin/scripts/pi-hole/php/CORREO/correo_almacenado.txt"
+]
+
+for archivo in archivos:
+    os.chmod(archivo, 0o777)
+    print(f"Permisos cambiados a 777 para {archivo}.")
 
 
 #Configura el crontab
