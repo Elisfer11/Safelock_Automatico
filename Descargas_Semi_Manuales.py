@@ -39,6 +39,12 @@ subprocess.call(['sudo', 'crontab', '/tmp/cronjob'])
 print("Tareas configuradas.")
 
 
+#Cambia nombre del equipo a safelock
+host_name = "safelock"
+with open('/etc/hostname', 'w') as host_file:
+    host_file.write(host_name)
+
+
 
 #Quita la suspencion automatica
 os.system("gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0")
