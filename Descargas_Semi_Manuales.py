@@ -23,7 +23,12 @@ os.system("pip3 install requests")
 #Permisos para los archivos
 archivos = [
     "/var/www/html/admin/scripts/pi-hole/php/CORREO/configuracion_correo.txt",
-    "/var/www/html/admin/scripts/pi-hole/php/CORREO/correo_almacenado.txt"
+    "/var/www/html/admin/scripts/pi-hole/php/CORREO/correo_almacenado.txt",
+	"/var/www/html/admin/estadisticas/stats/consultas_bloqueadas.txt",
+	"/var/www/html/admin/estadisticas/stats/dominios_en_listas.txt",
+	"/var/www/html/admin/estadisticas/stats/porcentaje_bloqueo.txt",
+	"/var/www/html/admin/estadisticas/stats/consultas_totales.txt",
+
 ]
 
 for archivo in archivos:
