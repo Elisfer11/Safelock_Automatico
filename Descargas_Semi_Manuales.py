@@ -16,9 +16,9 @@ os.system("sudo git clone --depth 1 https://github.com/OpenLock20/SL-INTERFACE-P
 os.system("sudo apt install -y yersinia")
 
 #Instala dependencias para el envio de correos
-os.system("sudo apt-get install python3-pip")
+os.system("sudo apt-get install -y python3-pip")
 
-os.system("pip3 install -y requests")
+os.system("pip3 install requests")
 
 #Permisos para los archivos
 archivos = [
@@ -46,7 +46,7 @@ with open('/etc/hostname', 'w') as host_file:
 
 
 
-#Quita la suspencion automatica
+#Quita la suspencion automatica (No funciona)
 os.system("gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0")
 
 
