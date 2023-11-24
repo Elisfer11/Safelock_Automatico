@@ -28,6 +28,7 @@ archivos = [
 	"/var/www/html/admin/estadisticas/stats/dominios_en_listas.txt",
 	"/var/www/html/admin/estadisticas/stats/porcentaje_bloqueo.txt",
 	"/var/www/html/admin/estadisticas/stats/consultas_totales.txt",
+	"/var/www/html/admin/pull.sh"
 
 ]
 
@@ -36,23 +37,20 @@ for archivo in archivos:
     print(f"Permisos cambiados a 777 para {archivo}.")
 
 
-#Configura el crontab
-cronjob = '* * * * * python3 /var/www/html/admin/new_crontab.py\n'
+#Actualiza Crontabs
+cronjob = '* * * * * python3 /var/www/html/admin/crontab_conf.py\n'
 with open('/tmp/cronjob', 'w') as cronfile:
     cronfile.write(cronjob)
 subprocess.call(['sudo', 'crontab', '/tmp/cronjob'])
-print("Tareas configuradas.")
+print("Crontabs Creados.")
 
 
 #Cambia nombre del equipo a safelock
-host_name = "safelock"
+host_name = "safeock"
 with open('/etc/hostname', 'w') as host_file:
     host_file.write(host_name)
 
 
-
-#Quita la suspencion automatica (No funciona)
-os.system("gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-timeout 0")
 
 
 #Instalacion TeamViewer
