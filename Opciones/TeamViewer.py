@@ -4,7 +4,7 @@ user = os.getlogin()
 
 os.system(f"sudo cp /home/{user}/Safelock_Automatico/Opciones/teamviewer-host_15.47.3_arm64.deb /home/{user}")
 
-os.system(f"sudo cp /home/{user}/Safelock_Automatico/Opciones/teamviewer-host_15.47.3_arm64.deb /home/safelock/Safelock_Automatico/")
+os.system(f"sudo cp /home/{user}/Safelock_Automatico/Opciones/teamviewer-host_15.47.3_arm64.deb /home/{user}/Safelock_Automatico/")
 
 os.system("sudo apt-get install -y ./teamviewer-host_15.47.3_arm64.deb")
 
