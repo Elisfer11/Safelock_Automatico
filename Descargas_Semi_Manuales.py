@@ -46,9 +46,14 @@ print("Crontabs Creados.")
 
 
 #Cambia nombre del equipo a safelock
-host_name = "safeock"
+host_name = "safelock"
 with open('/etc/hostname', 'w') as host_file:
     host_file.write(host_name)
+
+
+
+#instalacion del Chromium-Browser
+os.system("sudo apt install chromium-browser")
 
 
 
