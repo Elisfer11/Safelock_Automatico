@@ -65,3 +65,13 @@ user = os.getlogin()
 os.system(f"sudo python3 /home/{user}/Safelock_Automatico/Opciones/TeamViewer.py")
 
 os.system("ip address")
+
+
+
+#Se cambia de Wayland a Xorg
+remove_wayland = f"WaylandEnable=false"
+with open('/etc/gdm3/custom.conf', 'a') as host_file:
+    host_file.write(remove_wayland)
+
+os.system("systemctl restart gdm")
+
