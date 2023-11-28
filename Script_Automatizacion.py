@@ -67,7 +67,7 @@ remove_wayland = f"WaylandEnable=false"
 with open('/etc/gdm3/custom.conf', 'a') as host_file:
     host_file.write(remove_wayland)
 
-time.sleep(5)
+time.sleep(15)
 
 os.system("systemctl restart gdm")
 
