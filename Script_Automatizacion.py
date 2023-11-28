@@ -69,7 +69,14 @@ remove_wayland = f"WaylandEnable=false"
 with open('/etc/gdm3/custom.conf', 'a') as host_file:
     host_file.write(remove_wayland)
 
-time.sleep(30)
 
-os.system("systemctl restart gdm")
+
+
+#time.sleep(30)
+
+#os.system("systemctl restart gdm")
+
+print ("*********************************************************")
+print ("El SafeLock ya está listo")
+print ("Para que toda la configuración tenga efecto se deberá reiniciar el SafeLock")
 
