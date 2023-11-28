@@ -54,13 +54,15 @@ with open('/etc/hostname', 'w') as host_file:
 
 
 #instalacion del Chromium-Browser
-os.system("sudo apt install chromium-browser")
+#os.system("sudo apt install chromium-browser")
 
 
 
 
 #Instalacion TeamViewer
-os.system("sudo apt-get install teamviewer-host")
+user = os.getlogin()
+
+os.system(f"sudo python3 /home/{user}/Safelock_Automatico/TeamViewer/TeamViewer.py")
 
 #Se cambia de Wayland a Xorg
 remove_wayland = f"WaylandEnable=false"
