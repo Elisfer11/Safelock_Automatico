@@ -10,6 +10,8 @@ os.system("sudo curl -sSL https://raw.githubusercontent.com/OpenLock20/SL-MASTER
 new_password = "safelock"
 os.system(f'echo "{new_password}\n{new_password}" | sudo pihole -a -p')
 
+
+time.sleep(5)
 os.system("sudo rm -r /var/www/html/admin/")
 os.system("sudo git clone --depth 1 https://github.com/OpenLock20/SL-INTERFACE-PRODUCT /var/www/html/admin")
 
