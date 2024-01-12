@@ -1,0 +1,14 @@
+sudo apt-get install xserver-xorg-video-dummy
+
+sudo nano /etc/X11/xorg.conf
+
+Section "Device"
+    Identifier "dummy"
+    Driver "dummy"
+    Option "IgnoreEDID" "true"
+EndSection
+
+Section "Screen"
+    Identifier "dummy_screen"
+    Device "dummy"
+EndSection
