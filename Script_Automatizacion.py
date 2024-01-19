@@ -56,7 +56,7 @@ with open('/etc/hostname', 'w') as host_file:
 
 
 #instalacion del Chromium-Browser
-os.system("sudo apt install chromium-browser")
+os.system("sudo apt install -y chromium-browser")
 
 
 
