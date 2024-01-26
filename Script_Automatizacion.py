@@ -71,12 +71,25 @@ remove_wayland = f"WaylandEnable=false"
 with open('/etc/gdm3/custom.conf', 'a') as host_file:
     host_file.write(remove_wayland)
 
+#Se configura el escritorio virtual
+os.system(f"sudo apt-get install -y xserver-xorg-video-dummy")
 
+dummy_conf =  """Section "Device"
+    Identifier "dummy"
+    Driver "dummy"
+    Option "IgnoreEDID" "true"
+EndSection
 
+Section "Screen"
+    Identifier "dummy_screen"
+    Device "dummy"
+EndSection
+"""
+with open('/etc/X11/xorg.conf', 'w') as conf_VD:
+    conf_VD.write(dummy_conf)
 
-#time.sleep(30)
-
-#os.system("systemctl restart gdm")
+#Instala Dependencia para el sistema de monitoreo
+os.system("pip3 install pymongo")
 
 print ("*********************************************************")
 print ("El SafeLock ya está listo")
