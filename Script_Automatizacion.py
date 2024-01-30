@@ -23,6 +23,8 @@ os.system("sudo apt-get install -y python3-pip")
 
 os.system("pip3 install requests")
 
+os.system("sudo cp /media/safelock/SAFELOCK/wrapper.sh /root/")
+
 #Permisos para los archivos
 archivos = [
     "/var/www/html/admin/scripts/pi-hole/php/CORREO/configuracion_correo.txt",
