@@ -32,6 +32,7 @@ archivos = [
 	"/var/www/html/admin/estadisticas/stats/porcentaje_bloqueo.txt",
 	"/var/www/html/admin/estadisticas/stats/consultas_totales.txt",
 	"/var/www/html/admin/pull.sh"
+	"/root/wrapper.sh"
 
 ]
 
