@@ -29,10 +29,6 @@ os.system("sudo cp /media/safelock/SAFELOCK/wrapper.sh /root/")
 archivos = [
     "/var/www/html/admin/scripts/pi-hole/php/CORREO/configuracion_correo.txt",
     "/var/www/html/admin/scripts/pi-hole/php/CORREO/correo_almacenado.txt",
-	"/var/www/html/admin/estadisticas/stats/consultas_bloqueadas.txt",
-	"/var/www/html/admin/estadisticas/stats/dominios_en_listas.txt",
-	"/var/www/html/admin/estadisticas/stats/porcentaje_bloqueo.txt",
-	"/var/www/html/admin/estadisticas/stats/consultas_totales.txt",
 	"/var/www/html/admin/pull.sh",
 	"/root/wrapper.sh"
 
