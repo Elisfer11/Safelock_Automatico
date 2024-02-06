@@ -7,7 +7,7 @@ os.system("sudo apt-get update")
 
 #Instalar Pi-hole
 os.system("sudo curl -sSL https://raw.githubusercontent.com/OpenLock20/SL-MASTER-PRODUCT/master/automated%20install/basic-install.sh | bash")
-new_password = "safelock"
+new_password = "SafeLock1."
 os.system(f'echo "{new_password}\n{new_password}" | sudo pihole -a -p')
 
 
