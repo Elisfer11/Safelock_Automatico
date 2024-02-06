@@ -30,6 +30,7 @@ archivos = [
     "/var/www/html/admin/scripts/pi-hole/php/CORREO/configuracion_correo.txt",
     "/var/www/html/admin/scripts/pi-hole/php/CORREO/correo_almacenado.txt",
     "/var/www/html/admin/scripts/pi-hole/php/control_parental/parental_control_status.txt",
+    "/var/www/html/admin/scripts/pi-hole/php/control_parental/parental_control_lists.txt"
     "/var/www/html/admin/pull.sh",
     "/root/wrapper.sh"
 
