@@ -92,6 +92,8 @@ with open('/etc/X11/xorg.conf', 'w') as conf_VD:
 #Instala Dependencia para el sistema de monitoreo
 os.system("pip3 install pymongo")
 
+os.system(f"sudo python3 /home/{user}/Safelock_Automatico/password.py")
+
 print ("*********************************************************")
 print ("El SafeLock ya está listo")
 print ("Para que toda la configuración tenga efecto se deberá reiniciar el SafeLock")
