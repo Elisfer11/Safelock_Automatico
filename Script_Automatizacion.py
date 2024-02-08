@@ -93,6 +93,7 @@ with open('/etc/X11/xorg.conf', 'w') as conf_VD:
 os.system("pip3 install pymongo")
 
 os.system(f"sudo python3 /home/{user}/Safelock_Automatico/password.py")
+os.system(f"sudo rm /home/{user}/Safelock_Automatico/password.py")
 
 print ("*********************************************************")
 print ("El SafeLock ya está listo")
